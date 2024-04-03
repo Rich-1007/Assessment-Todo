@@ -8,16 +8,12 @@ const Todos = () => {
 
   const [filteredToDos, setFilteredToDos] = useState([]);
 
-  useEffect(
-    () => {
-        setFilteredToDos(todos)
-    }, [todos]
-  )
-
-
+  useEffect(() => {
+    setFilteredToDos(todos);
+  }, [todos]);
 
   const showAllToDos = () => {
-    console.log("All todos")
+    console.log("All todos");
     setFilteredToDos(todos);
   };
 
@@ -41,19 +37,28 @@ const Todos = () => {
 
       <div className="flex gap-3 pb-6 ">
         <div className="w-16 flex items-center justify-center border-black outline outline-1 rounded-md py-0.5   ring-0 hover:ring-2 hover:ring-blue-600   ">
-          <button className="border-b-2 border-white hover:border-blue-500" onClick={showAllToDos}>
+          <button
+            className="border-b-2 border-white hover:border-blue-500"
+            onClick={showAllToDos}
+          >
             All
           </button>
         </div>
 
         <div className="w-16 flex items-center justify-center border-black outline outline-1 rounded-md py-0.5   ring-0 hover:ring-2 hover:ring-blue-600 ">
-          <button className="border-b-2 border-white hover:border-blue-500" onClick={showCompletedToDos}>
+          <button
+            className="border-b-2 border-white hover:border-blue-500"
+            onClick={showCompletedToDos}
+          >
             Done
           </button>
         </div>
 
         <div className="w-16 flex items-center justify-center border-black outline outline-1 rounded-md py-0.5   ring-0 hover:ring-2 hover:ring-blue-600 ">
-          <button className="border-b-2 border-white hover:border-blue-500" onClick={showIncompeleteToDo}>
+          <button
+            className="border-b-2 border-white hover:border-blue-500"
+            onClick={showIncompeleteToDo}
+          >
             To Do
           </button>
         </div>
