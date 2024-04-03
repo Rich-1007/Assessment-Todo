@@ -6,10 +6,12 @@ const AddTodoForm = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  
+
   const submitToDoHandler = (e) => {
     e.preventDefault();
     dispatch(addToDo({ title, description }));
+    setTitle("")
+    setDescription("")
   };
   return (
     <div>
@@ -47,6 +49,7 @@ const AddTodoForm = () => {
         <div className="bg-blue-900 text-white flex justify-center rounded-md p-1  border-2 hover:border-purple-500">
           <button>Add Task</button>
         </div>
+
       </form>
     </div>
   );
